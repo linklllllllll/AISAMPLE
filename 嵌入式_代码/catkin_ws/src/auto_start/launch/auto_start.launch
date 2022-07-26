@@ -1,0 +1,37 @@
+<launch>
+    <!-- 开启机器人底层相关节点  -->
+    <include file="$(find turn_on_wheeltec_robot)/launch/turn_on_my_robot.launch"/> 
+
+    <!-- 开启雷达、cartographer纯定位、导航相关节点  -->
+    <!-- <include file="$(find main_control)/launch/pure_localization.launch" /> -->
+
+     <!-- 检测是否导航到目标点 开启人脸跟随 检测跟随完成时 start sample -->
+    <include file="$(find main_control)/launch/arrival_control.launch" />
+
+    <!-- 与手机通信 发布ID的topic  -->
+
+    <!-- cm_demo  -->
+    <!-- <include file="$(find gluon_moveit_config)/launch/cm_demo.launch" /> -->
+
+    <!-- 开启机械臂相关节点 等待接收ID 接收start sample信号 -->
+    <!-- <include file="$(find main_control)/launch/gluon.launch" /> -->
+
+    <!-- 开启深度相机与人脸检测相关节点  -->
+    <!-- <include file="$(find face_detect)/launch/dep02.launch" /> -->
+
+    <!-- 接收ID 发布goal  -->
+    <!-- <include file="$(find main_control)/launch/receive_id.launch" /> -->
+
+    <!-- <include file="$(find simple_follower)/launch/face_track.launch" /> -->
+
+    <!-- <include file="$(find main_control)/launch/record.launch" /> -->
+
+
+
+    <!-- 开启语音识别相关节点  -->
+    <!-- <include file="$(find main_control)/launch/voice_recognize.launch" /> -->
+
+    <!-- 开启语音控制相关节点  -->
+    <!-- <include file="$(find main_control)/launch/voice_control.launch" /> -->
+
+</launch>

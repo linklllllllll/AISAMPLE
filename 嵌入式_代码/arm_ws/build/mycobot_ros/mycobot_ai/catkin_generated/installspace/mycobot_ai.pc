@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/arm_ws/install
+
+Name: mycobot_ai
+Description: Description of mycobot_ai
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

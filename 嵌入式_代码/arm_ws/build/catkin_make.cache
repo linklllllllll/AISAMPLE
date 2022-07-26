@@ -1,0 +1,2 @@
+gluon_2l6_4l3:mycobot_ros/mycobot_280:mycobot_ros/mycobot_280_moveit:mycobot_ros/mycobot_ai:mycobot_ros/mycobot_communication:mycobot_ros/mycobot_description:ros_gluon/gluon:ros_gluon/gluon_control:ros_gluon/gluon_moveit_config:ros_gluon/gluon_planning:ros_gluon/mygluon_moveit_config
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/arm_ws/install -G Unix Makefiles

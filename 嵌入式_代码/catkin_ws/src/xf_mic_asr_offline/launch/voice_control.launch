@@ -1,0 +1,6 @@
+<launch>
+
+  <node pkg="xf_mic_asr_offline" type="voice_control" name="voice_control" />
+
+  
+</launch>

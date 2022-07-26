@@ -1,0 +1,38 @@
+# CMake generated Testfile for 
+# Source directory: /home/ubuntu/catkin_ws/src
+# Build directory: /home/ubuntu/catkin_ws/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("realsense-ros/realsense2_description")
+subdirs("aruco_ros/aruco_msgs")
+subdirs("turtlebot3/turtlebot3/turtlebot3")
+subdirs("turtlebot3/turtlebot3_msgs")
+subdirs("turtlebot3/turtlebot3/turtlebot3_navigation")
+subdirs("turtlebot3/turtlebot3_simulations/turtlebot3_simulations")
+subdirs("auto_start")
+subdirs("face_detect")
+subdirs("main_control")
+subdirs("robot_voice")
+subdirs("aruco_ros/aruco")
+subdirs("rplidar_ros")
+subdirs("simple_follower")
+subdirs("aruco_ros/aruco_ros")
+subdirs("handeye-calib/src/handeye-calib")
+subdirs("realsense-ros/realsense2_camera")
+subdirs("robot_pose_ekf")
+subdirs("rrt_exploration")
+subdirs("turn_on_wheeltec_robot")
+subdirs("turtlebot3/turtlebot3/turtlebot3_bringup")
+subdirs("turtlebot3/turtlebot3/turtlebot3_example")
+subdirs("turtlebot3/turtlebot3_simulations/turtlebot3_fake")
+subdirs("turtlebot3/turtlebot3_simulations/turtlebot3_gazebo")
+subdirs("turtlebot3/turtlebot3/turtlebot3_slam")
+subdirs("turtlebot3/turtlebot3/turtlebot3_teleop")
+subdirs("teb_local_planner")
+subdirs("wheeltec_joy_control")
+subdirs("wheeltec_multi")
+subdirs("wheeltec_robot_rc")
+subdirs("turtlebot3/turtlebot3/turtlebot3_description")
+subdirs("xf_mic_asr_offline")

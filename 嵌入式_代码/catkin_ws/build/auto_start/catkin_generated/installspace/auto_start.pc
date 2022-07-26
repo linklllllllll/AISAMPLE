@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/install
+
+Name: auto_start
+Description: Description of auto_start
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

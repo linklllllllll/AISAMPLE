@@ -1,0 +1,5 @@
+<launch>
+
+  <node name='goal_control' pkg="simple_follower" type="goal_control.py" output="screen" />
+  
+</launch>

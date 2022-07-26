@@ -1,0 +1,5 @@
+<launch>
+
+  <node name='follow_face' pkg="gluon_planning" type="follow_face.py" output="screen" />
+  
+</launch>

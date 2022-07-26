@@ -1,0 +1,5 @@
+<launch>
+
+  <node name='record' pkg="main_control" type="record.py" output="screen" />
+  
+</launch>

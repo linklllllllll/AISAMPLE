@@ -1,0 +1,2 @@
+netstat -tlnp | grep 7654 
+杀死进程：kill -9 45998(端口号)

@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="simple_follower" type="receive_id.py" name="receive_id" />
+
+</launch>

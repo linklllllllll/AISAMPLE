@@ -1,0 +1,5 @@
+<launch>
+
+  <node name='track_face' pkg="simple_follower" type="face_track.py" output="screen" />
+  
+</launch>

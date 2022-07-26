@@ -1,0 +1,17 @@
+<launch>
+  <!-- 是否在建图时开启导航 默认不开启 仅在rrt自主建图时同时进行-->
+  <arg name="car_mode"  default="senior_mec_dl" />
+  <arg name="navigation"  default="true"/>
+
+  <!-- turn on lidar开启雷达  -->
+  <include file="$(find turn_on_wheeltec_robot)/launch/wheeltec_lidar.launch" />
+
+   <!-- 开启cartographer建图算法  -->
+  <include file="$(find cartographer_ros)/launch/ym_cartographer.launch" />
+  <!-- 开启机器人导航相关节点  -->
+  <!-- 开启teb_local_planner导航算法-->
+  <include file="$(find turn_on_wheeltec_robot)/launch/include/teb_local_planner.launch" if="$(arg navigation)">
+    <arg name="car_mode" value="$(arg car_mode)"/>
+  </include>
+
+</launch>

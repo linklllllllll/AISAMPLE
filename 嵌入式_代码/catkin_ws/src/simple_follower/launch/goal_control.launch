@@ -1,0 +1,9 @@
+<launch>
+  <!-- 开启RGB摄像头  -->
+  <!-- <include file="$(find astra_camera)/launch/astra.launch" /> -->
+  <!-- <include file="$(find face_detect)/launch/dep02.launch" /> -->
+  <!-- 开启人脸追踪  -->
+  <node name='goal_control' pkg="simple_follower" type="goal_control.py" output="screen">
+  </node>   <!-- 开启机器人底层相关节点  -->
+  <!-- <include file="$(find turn_on_wheeltec_robot)/launch/turn_on_wheeltec_robot.launch" /> -->
+</launch>

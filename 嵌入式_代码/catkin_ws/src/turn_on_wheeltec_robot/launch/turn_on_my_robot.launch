@@ -1,0 +1,29 @@
+<launch>
+  <!-- Arguments参数 -->
+  <arg name="car_mode"  default="senior_mec_dl" />
+
+  <!--是否开启导航功能 在导航相关文件中开启 此处默认不开启-->
+  <arg name="navigation"  default="false"/>
+  <arg name="pure3d_nav"  default="false"/>
+  <!--是否重复开启底层节点 在语音运行自主建图时开启 此处默认不开启-->
+  <arg name="repeat"  default="false"/>
+  <!--是否使用cartographer建图算法 此处默认不使用-->
+  <arg name="is_cartographer"  default="true"/>
+  <arg name="odom_frame_id"  default="odom_combined"/>
+  
+  <!-- turn on base_serial 开启底层单片机的控制节点  -->
+  <include file="$(find turn_on_wheeltec_robot)/launch/include/base_serial.launch" unless="$(arg repeat)">
+    <arg name="odom_frame_id"  value="$(arg odom_frame_id)"/>
+  </include>
+   
+  <include file="$(find turn_on_wheeltec_robot)/launch/include/teb_local_planner.launch" if="$(arg navigation)">
+    <arg name="car_mode" value="$(arg car_mode)"/>
+  </include>
+  
+  <node pkg="tf" type="static_transform_publisher" name="base_to_link" args="0 0 0 0 0 0 base_footprint base_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0.18 0.00 0.32 3.14 0 0  base_footprint laser 100" />
+  <node pkg="tf" type="static_transform_publisher" name="base_to_gyro" args="0 0 0 0 0 0 base_footprint gyro_link 100" />
+
+ </launch>
+
+

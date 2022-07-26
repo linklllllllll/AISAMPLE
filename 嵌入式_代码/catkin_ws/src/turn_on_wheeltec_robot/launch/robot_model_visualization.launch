@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0.18 0.00 0.32 3.14 0 0  base_footprint laser 100" />
+    <node pkg="tf" type="static_transform_publisher" name="base_to_camera" args="0.240 0 0.27 0 0 0   base_footprint camera_link 100" />
+    <node pkg="tf" type="static_transform_publisher" name="base_to_gyro" args="0 0 0 0 0 0 base_footprint gyro_link 100" />
+
+    <param name = "robot_description" textfile = "$(find turn_on_wheeltec_robot)/urdf/senior_mec_dl_robot.urdf"/> 
+  
+    <!-- 读取urdf信息(robot_description) 发布话题：/joint_states-->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <!-- 订阅话题：/joint_states，发布小车TF信息-->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+ </launch>
+
+

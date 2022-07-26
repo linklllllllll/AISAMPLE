@@ -1,0 +1,10 @@
+<launch>
+    <!-- 思岚雷达参数 -->
+    <param name="/rplidarNode/angle_start"         type="double" value="0"  />   <!-- 扫描起始角度-->
+    <param name="/rplidarNode/angle_end"           type="double" value="360"/>   <!-- 扫描结束角度-->
+    <param name="/rplidarNode/distance_min"        type="double" value="0"  /> <!-- 最小扫描距离-->
+    <param name="/rplidarNode/distance_max"        type="double" value="30" /> <!-- 最大扫描距离-->
+    
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+
+</launch>

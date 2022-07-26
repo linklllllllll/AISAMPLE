@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find realsense2_camera)/launch/rs_aligned_depth.launch"/>
+
+    <node pkg="face_detect" name="facedetect" type="facedetect"  />
+    <param name="image_transport"   value="compressed"/>
+</launch>
